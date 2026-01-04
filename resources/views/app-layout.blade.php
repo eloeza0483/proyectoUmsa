@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Proyecto Umsa</title>
-    <link rel="stylesheet" href="../assets/libs/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/libs/fontawesome/fontawesome.min.css') }}">
 </head>
 <body class="w-screen min-h-screen flex flex-col bg-slate-50">
     <header class="h-auto shadow-md relative z-50">

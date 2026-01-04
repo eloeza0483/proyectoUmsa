@@ -3,17 +3,20 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Vite; // <--- ESTA LÍNEA ES LA QUE FALTA
+use Illuminate\Support\Facades\Vite;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
     // ... (registro de servicios)
 
- public function boot(): void
+
+
+public function boot(): void
 {
-    \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
-    
-    // Añade esta línea:
+    // Solo usa esto si realmente moviste los archivos a public/build
+    Vite::useBuildDirectory('build');
+
     if (app()->environment('production')) {
         URL::forceScheme('https');
     }
