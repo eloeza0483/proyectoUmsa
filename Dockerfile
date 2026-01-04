@@ -21,6 +21,7 @@ RUN mkdir -p database storage bootstrap/cache
 RUN touch database/database.sqlite
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 775 storage bootstrap/cache public/build
+RUN chmod -R 755 /var/www/html/public && chown -R www-data:www-data /var/www/html/public
 
 EXPOSE 80
 

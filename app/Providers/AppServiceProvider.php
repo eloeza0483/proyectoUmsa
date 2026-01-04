@@ -9,8 +9,8 @@ class AppServiceProvider extends ServiceProvider
 {
     // ... (registro de servicios)
 
-    public function boot(): void
-    {
-        Vite::useBuildDirectory('build'); // Ahora sí reconocerá qué es Vite
-    }
+  public function boot(): void
+{
+    \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
+}
 }
