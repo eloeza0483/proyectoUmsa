@@ -1,12 +1,13 @@
 FROM php:8.2-apache
 
-# Instalar extensiones necesarias
+# Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip
+    unzip \
+    git
 
 # Configurar Apache
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
@@ -17,19 +18,17 @@ RUN a2enmod rewrite
 COPY . /var/www/html
 WORKDIR /var/www/html
 
-# Instalar dependencias de PHP
+# Instalar Composer y dependencias
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Permisos
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+# CREAR EL ARCHIVO DE BASE DE DATOS (Esto elimina el Error 500)
+RUN mkdir -p database && touch database/database.sqlite
+
+# Permisos finales
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 
 EXPOSE 80
 
-# ... (todo lo anterior igual)
-
-# Asegurar que existan las carpetas de caché
-RUN mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache
-
-# Comando para limpiar caché y arrancar Apache
-CMD php artisan config:clear && php artisan cache:clear && php artisan view:clear && apache2-foreground
+# Comando de inicio simple
+CMD ["apache2-foreground"]
