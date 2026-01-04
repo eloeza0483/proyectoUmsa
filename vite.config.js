@@ -8,8 +8,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // Agrega esto si no lo tienes para asegurar rutas relativas
     build: {
-        outDir: 'public/build',
+        outDir: 'public/build', // Asegura que la salida sea public/build
+        manifest: true,         // Genera obligatoriamente el manifest.json
     }
 });

@@ -1,44 +1,24 @@
 FROM php:8.2-apache
 
-# 1. Instalar dependencias del sistema y Node.js
-RUN apt-get update && apt-get install -y \
-    libpng-dev libonig-dev libxml2-dev zip unzip git curl \
-    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodesource-repo nodesource-repo \
-    && apt-get install -y nodejs
+# ... (Instalación de dependencias igual que el anterior)
 
-# 2. Configurar Apache
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
-RUN a2enmod rewrite
-
-# 3. Copiar proyecto
+# Copiar proyecto
 COPY . /var/www/html
 WORKDIR /var/www/html
 
-# 4. Instalar dependencias de PHP (Composer)
+# Instalar dependencias de PHP
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --optimize-autoloader
 
-# 5. Instalar dependencias de Frontend y COMPILAR (Esto quita el error de Vite)
-RUN npm install
-RUN npm run build
+# Crear DB y dar permisos
+RUN mkdir -p database storage bootstrap/cache public/build
+RUN touch database/database.sqlite
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 775 storage bootstrap/cache public/build
 
-# 6. Base de datos y Permisos
-RUN mkdir -p database && touch database/database.sqlite
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database public/build
+# LIMPIEZA DE CACHÉ ANTES DE INICIAR
+RUN php artisan config:clear && php artisan view:clear && php artisan route:clear
 
 EXPOSE 80
 
 CMD ["apache2-foreground"]
-# ... (resto del archivo)
-
-COPY . /var/www/html
-
-# Permisos totales a las carpetas críticas, incluyendo public/build
-RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public
-RUN chown -R www-data:www-data /var/www/html
-
-RUN php artisan view:clear && php artisan config:clear
-
-# ...
