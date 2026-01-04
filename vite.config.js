@@ -9,7 +9,7 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: 'public/build', // Asegura que la salida sea public/build
-        manifest: true,         // Genera obligatoriamente el manifest.json
+        outDir: 'public/build', // Fuerza la salida aquí
+        assetsDir: 'assets',
     }
 });

@@ -1,23 +1,27 @@
 FROM php:8.2-apache
 
-# ... (Instalación de dependencias igual que el anterior)
+# Instalar dependencias básicas
+RUN apt-get update && apt-get install -y libpng-dev libonig-dev libxml2-dev zip unzip git
 
-# Copiar proyecto
+# Configurar Apache
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite
+
+# Copiar el proyecto (incluyendo la carpeta public/build que subiste)
 COPY . /var/www/html
 WORKDIR /var/www/html
 
-# Instalar dependencias de PHP
+# Instalar Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Crear DB y dar permisos
-RUN mkdir -p database storage bootstrap/cache public/build
-RUN touch database/database.sqlite
-RUN chown -R www-data:www-data /var/www/html
-RUN chmod -R 775 storage bootstrap/cache public/build
+# Crear DB vacía para evitar errores de conexión
+RUN mkdir -p database && touch database/database.sqlite
 
-# LIMPIEZA DE CACHÉ ANTES DE INICIAR
-RUN php artisan config:clear && php artisan view:clear && php artisan route:clear
+# PERMISOS: Muy importante para que Laravel pueda leer el manifiesto
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/build
 
 EXPOSE 80
 
