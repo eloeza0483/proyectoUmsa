@@ -31,3 +31,14 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 EXPOSE 80
 
 CMD ["apache2-foreground"]
+# ... (resto del archivo)
+
+COPY . /var/www/html
+
+# Permisos totales a las carpetas críticas, incluyendo public/build
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public
+RUN chown -R www-data:www-data /var/www/html
+
+RUN php artisan view:clear && php artisan config:clear
+
+# ...
