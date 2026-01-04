@@ -9,8 +9,13 @@ class AppServiceProvider extends ServiceProvider
 {
     // ... (registro de servicios)
 
-  public function boot(): void
+ public function boot(): void
 {
     \Illuminate\Support\Facades\Vite::useBuildDirectory('build');
+    
+    // Añade esta línea:
+    if (app()->environment('production')) {
+        URL::forceScheme('https');
+    }
 }
 }
