@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
-/* Asegúrate de que apunten a la carpeta correcta desde resources/css */
-@source "../../resources/**/*.blade.php";
-@source "../../resources/**/*.js";
+/* Forzamos a Tailwind a buscar en todo el proyecto ignorando niveles de carpeta */
+@source "../../**/*.blade.php";
+@source "../../**/*.js";
 @source "../../app/Http/Controllers/**/*.php";
 
 @theme {
