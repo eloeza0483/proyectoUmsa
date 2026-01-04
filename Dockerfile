@@ -25,3 +25,11 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 EXPOSE 80
+
+# ... (todo lo anterior igual)
+
+# Asegurar que existan las carpetas de caché
+RUN mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache
+
+# Comando para limpiar caché y arrancar Apache
+CMD php artisan config:clear && php artisan cache:clear && php artisan view:clear && apache2-foreground
