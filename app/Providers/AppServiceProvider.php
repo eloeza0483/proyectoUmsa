@@ -3,22 +3,14 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Vite; // <--- ESTA LÍNEA ES LA QUE FALTA
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-        //
-    }
+    // ... (registro de servicios)
 
-    /**
-     * Bootstrap any application services.
-     */
- public function boot(): void
-{
-    Vite::useBuildDirectory('build');
-}
+    public function boot(): void
+    {
+        Vite::useBuildDirectory('build'); // Ahora sí reconocerá qué es Vite
+    }
 }
