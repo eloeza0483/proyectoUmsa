@@ -19,7 +19,7 @@
             <!-- Afro Mojito -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="https://placehold.co/600x400/0f766e/ffffff?text=Afro+Mojito" alt="Afro Mojito" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="https://placehold.co/600x400/0f766e/ffffff?text=Afro+Mojito" alt="Afro Mojitoo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <div class="p-6">
