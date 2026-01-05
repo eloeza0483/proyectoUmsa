@@ -4,16 +4,16 @@
 
     <div class="flex flex-col md:flex-row w-8/10 mx-auto gap-10 mt-10 mb-20 items-center">
         <div class="w-full md:w-1/2 h-96 relative group">
-            <img src="{{ asset('imgs/hamburguesas.jpg') }}" alt="Hamburguesas" class="w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+            <img src="{{ asset('imgs/boneless.jpeg') }}" alt="Tropical Boneless" class="w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 rounded-2xl ring-1 ring-black/10"></div>
         </div>
         
         <div class="flex flex-col w-full md:w-1/2 shadow-2xl bg-white p-10 rounded-2xl border border-gray-100 relative overflow-hidden">
             <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-emerald-100 rounded-full opacity-50 blur-3xl"></div>
             
-            <h2 class="text-4xl font-extrabold uppercase text-emerald-900 mb-6 relative z-10 leading-tight">Prueba nuestras deliciosas hamburguesas.</h2>
+            <h2 class="text-4xl font-extrabold uppercase text-emerald-900 mb-6 relative z-10 leading-tight">Prueba nuestros deliciosos Boneless.</h2>
 
-            <p class="mb-8 text-gray-600 text-lg leading-relaxed relative z-10">No te quedes sin probar nuestra nueva hamburguesa, <span class="text-emerald-600 font-bold">la tropical burger</span>. Una explosión de sabores en cada bocado que te transportará.</p>
+            <p class="mb-8 text-gray-600 text-lg leading-relaxed relative z-10">No te quedes sin probar nuestros nuevos <span class="text-emerald-600 font-bold">Tropical Boneless</span>. Una explosión de sabores en cada bocado que te transportará.</p>
             
             <a href="/menu" class="inline-flex items-center justify-center bg-emerald-800 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-emerald-700 hover:shadow-xl transition-all duration-300 w-fit group">
                 Ver menú
@@ -39,7 +39,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-center mb-4 text-emerald-900">Misión</h3>
                     <p class="text-gray-600 text-center leading-relaxed">
-                        Brindar a nuestros clientes una experiencia gastronómica única, ofreciendo hamburguesas de la más alta calidad con ingredientes frescos y un sabor inigualable, en un ambiente acogedor y familiar que invite a compartir momentos especiales.
+                        Brindar a nuestros clientes una experiencia gastronómica única, ofreciendo alitas y boneless de la más alta calidad con ingredientes frescos y un sabor inigualable, en un ambiente acogedor y familiar que invite a compartir momentos especiales.
                     </p>
                 </div>
                 
@@ -52,9 +52,35 @@
                     </div>
                     <h3 class="text-2xl font-bold text-center mb-4 text-emerald-900">Visión</h3>
                     <p class="text-gray-600 text-center leading-relaxed">
-                        Ser reconocidos como la mejor hamburguesería de la región, destacándonos por nuestra innovación en sabores, excelencia en el servicio y compromiso con la satisfacción de nuestros clientes, expandiendo nuestra pasión por la buena comida.
+                        Ser reconocidos como el mejor destino de wings & boneless de la región, destacándonos por nuestra innovación en sabores, excelencia en el servicio y compromiso con la satisfacción de nuestros clientes, expandiendo nuestra pasión por la buena comida.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="bg-emerald-900 text-white py-16 mb-12 rounded-2xl w-8/10 mx-auto shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="relative z-10 text-center">
+            <h2 class="text-3xl font-bold uppercase mb-8 tracking-wider">¡Síguenos en nuestras redes!</h2>
+            
+            <div class="flex justify-center gap-10 flex-wrap">
+                <!-- Instagram -->
+                <a href="https://instagram.com/thehabanahub" target="_blank" class="flex flex-col items-center group">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-pink-600 transition-colors duration-300 backdrop-blur-sm">
+                        <i class="fa-brands fa-instagram text-4xl text-white"></i>
+                    </div>
+                    <span class="text-lg font-medium group-hover:text-pink-400 transition-colors">@thehabanahub</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com/thehabanahub" target="_blank" class="flex flex-col items-center group">
+                     <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors duration-300 backdrop-blur-sm">
+                        <i class="fa-brands fa-facebook-f text-4xl text-white"></i>
+                    </div>
+                    <span class="text-lg font-medium group-hover:text-blue-400 transition-colors">thehabanahub</span>
+                </a>
             </div>
         </div>
     </section>

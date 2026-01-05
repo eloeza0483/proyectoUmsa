@@ -1,8 +1,11 @@
 <nav class="bg-emerald-900 shadow-md">
     <div class="w-8/10 mx-auto flex flex-row justify-between items-center py-4 text-white">
-        <h1 class="text-3xl font-extrabold tracking-tighter uppercase cursor-pointer hover:text-emerald-400 transition-colors">
-            The Habana Club
-        </h1>
+        <div class="flex items-center gap-3">
+             <img src="{{ asset('imgs/logo.JPG') }}" alt="Logo" class="w-16 h-16 rounded-full border-2 border-amber-400 shadow-md">
+             <h1 class="text-3xl font-extrabold tracking-tighter uppercase cursor-pointer hover:text-emerald-400 transition-colors">
+                The Habana Club
+             </h1>
+        </div>
         
         <ul class="flex flex-row gap-8 items-center text-lg font-medium">
             <li><a href="/" class="hover:text-amber-400 transition-colors duration-300">Inicio</a></li>

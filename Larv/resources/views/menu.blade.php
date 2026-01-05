@@ -191,14 +191,14 @@
                 </div>
             </div>
 
-            <!-- Combo Mix -->
+            <!-- Combo Burger -->
             <div class="relative bg-emerald-900 rounded-2xl p-8 hover:bg-emerald-800 transition-colors duration-300 text-center group">
                  <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                    <img src="https://placehold.co/150x150/047857/ffffff?text=Combo+Mix" alt="Combo Mix" class="w-24 h-24 rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-transform">
+                    <img src="https://placehold.co/150x150/047857/ffffff?text=Combo+Burger" alt="Combo Burger" class="w-24 h-24 rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-transform">
                 </div>
                 <div class="mt-12">
-                     <h4 class="text-2xl font-bold text-white mb-2">Combo Mix</h4>
-                     <p class="text-emerald-200 text-lg">Boneless + Alitas + papas + drink</p>
+                     <h4 class="text-2xl font-bold text-white mb-2">Combo Burger</h4>
+                     <p class="text-emerald-200 text-lg">Hamburguesa + papas + drink</p>
                      <button class="mt-6 bg-amber-400 text-emerald-900 font-bold py-2 px-6 rounded-full hover:bg-amber-300 transition-colors">Pedir Ahora</button>
                 </div>
             </div>
