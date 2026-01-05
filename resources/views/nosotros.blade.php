@@ -18,7 +18,7 @@
             <h3 class="text-xl font-bold text-gray-800">SANTOS RIVAS LISANDRO
 HUMBERTO</h3>
             <p class="text-emerald-600 font-semibold mb-3">Adminstrador/ Contabilidad</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Visionario con más de 10 años de experiencia en la industria gastronómica. Apasionado por crear experiencias únicas.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Encargado de mantener el ritmo financiero de la casa. Asegura que los números fluyan con la misma armonía que nuestros sabores.</p>
              <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-twitter text-lg"></i></a>
@@ -33,7 +33,7 @@ HUMBERTO</h3>
             <h3 class="text-xl font-bold text-gray-800">SANCHEZ MORENO
 DIANA ISABELLA</h3>
             <p class="text-emerald-600 font-semibold mb-3">CEO</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Experta en logística y optimización de procesos. Asegura que cada platillo llegue perfecto a tu mesa.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Visionaria líder del equipo. Fusiona liderazgo y pasión para llevar la experiencia tropical a otro nivel.</p>
             <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-twitter text-lg"></i></a>
@@ -48,7 +48,7 @@ DIANA ISABELLA</h3>
             <h3 class="text-xl font-bold text-gray-800">SERRANO GONZALEZ
 MARLEN YOSELIN</h3>
             <p class="text-emerald-600 font-semibold mb-3">Atencion al cliente/ Logistica </p>
-            <p class="text-gray-500 text-sm leading-relaxed">El genio culinario detrás de nuestro menú. Fusiona técnicas tradicionales con sabores modernos.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Maestra de la logística y la atención. Garantiza que cada pedido llegue con la frescura y rapidez que mereces.</p>
             <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
@@ -63,7 +63,7 @@ MARLEN YOSELIN</h3>
             <h3 class="text-xl font-bold text-gray-800">GARCIA SOSA
 JENNIFER CRISTINA</h3>
             <p class="text-emerald-600 font-semibold mb-3">Directora de Marketing</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Creativa y estratega. Lleva nuestra marca a nuevos horizontes y conecta con nuestra comunidad.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">La voz de nuestra marca. Conecta nuestra vibra tropical con el mundo a través de campañas creativas y redes sociales.</p>
             <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
@@ -78,7 +78,7 @@ JENNIFER CRISTINA</h3>
             <h3 class="text-xl font-bold text-gray-800">MEDINA CASERES
 GABRIEL ALEJANDRO</h3>
             <p class="text-emerald-600 font-semibold mb-3">Supervisor de planta</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Implementa soluciones tecnológicas innovadoras para mejorar la experiencia de nuestros clientes.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">El guardián de la calidad. Supervisa cada proceso en cocina para asegurar que cada boneless sea una obra maestra.</p>
              <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
@@ -93,7 +93,7 @@ GABRIEL ALEJANDRO</h3>
             <h3 class="text-xl font-bold text-gray-800">AGUIRRE PANTOJA
 DAZNET YAMILET</h3>
             <p class="text-emerald-600 font-semibold mb-3">Diseñadora grafica</p>
-            <p class="text-gray-500 text-sm leading-relaxed">Responsable de la salud financiera de la empresa y de asegurar el crecimiento sostenible.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">La artista visual. Plasma nuestra identidad tropical en cada diseño, desde el menú hasta nuestras redes.</p>
              <div class="mt-4 flex justify-center gap-3">
                 <a href="#" class="text-gray-400 hover:text-emerald-600 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
             </div>
